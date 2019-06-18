@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'surface';
+
+  search(newText: string): void {
+    console.log(newText)
+  }
 }

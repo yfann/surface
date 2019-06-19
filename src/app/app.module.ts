@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 
 import {JsonHttpProvider} from './services/json-http'
 import {DataServiceProvider} from './services/data-service'
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -13,9 +15,11 @@ import {DataServiceProvider} from './services/data-service'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    CommonModule,
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [JsonHttpProvider,DataServiceProvider],
+  providers: [HttpClientModule,JsonHttpProvider,DataServiceProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -8,4 +8,8 @@ export class DataServiceProvider {
    search(desc:string){
      return this.http.get('http://localhost:5000/jiaoyou?s='+desc);
    }
+
+   getAll(){
+    return this.http.get('http://127.0.0.1:5000/jiaoyou/all');
+  }
 }

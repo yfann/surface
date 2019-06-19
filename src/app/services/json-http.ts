@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import 'rxjs/add/operator/map';
+
 
 /*
   Generated class for the JsonHttpProvider provider.
@@ -17,11 +17,11 @@ export class JsonHttpProvider {
 
   get(url: string) {
     console.log(`GET ${url}`);
-    return this.http.get(url).map(res => res['data']);
+    return this.http.get(url);
   }
 
   post(url: string, data) {
     console.log(`POST ${url}`);
-    return this.http.post(url, data).map(res => res['data']);
+    return this.http.post(url, data);
   }
 }

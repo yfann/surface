@@ -1,0 +1,14 @@
+<ng-template #images>
+    <div *ngFor="let url of item.imgs">
+        <img src="{{url}}" alt="">
+    </div>
+</ng-template>
+
+<div class="item-card">
+    <a href="{{item.url}}">{{item.name}}</a>
+    <button type="button" class="btn btn-outline-secondary mr-2" placement="right"
+        [ngbPopover]="images" popoverTitle="image">
+    Popover on top
+    </button>
+    <div>{{item.desc}}</div>
+</div>

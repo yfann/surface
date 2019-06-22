@@ -8,12 +8,16 @@ import {JsonHttpProvider} from './services/json-http'
 import {DataServiceProvider} from './services/data-service'
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import {ItemCard} from './item-card/item-card';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ItemCard
   ],
   imports: [
+    NgbModule,
     BrowserModule,
     CommonModule,
     AppRoutingModule,

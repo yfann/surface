@@ -3,4 +3,8 @@
     <input type="text" name="search" #searchbar (keyup.enter)="search(searchbar.value)">
 </div>
 
-<div class="items"></div>
+<div class="items">
+    <div *ngFor="let item of items">
+        <item-card [item]='item'></item-card>
+    </div>
+</div>

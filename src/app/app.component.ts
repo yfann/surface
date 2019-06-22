@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {DataServiceProvider}from './services/data-service'
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,13 +8,14 @@ import {DataServiceProvider}from './services/data-service'
 })
 export class AppComponent {
   title = 'surface';
+  items;
   constructor(private service: DataServiceProvider) {
   }
 
   search(newText: string): void {
     this.service.getAll().subscribe(
       res=>{
-        console.log(res);
+        this.items=res;
       }
     )
   }

@@ -1,0 +1,24 @@
+.item-card{
+    margin-bottom: 20px;
+    padding: 5px;
+    background-color: #cce5ff;
+}
+
+.item-card .desc{
+    background-color: #fff3cd;
+    padding: 6px;
+}
+
+.item-card .img-info{
+    width: 27px;
+    display: inline-block;
+    text-align: center;
+    background-color:  #f98dba;
+    margin: 0 10px;
+    border-radius: 11px;
+    color: #312b65;
+}
+
+.item-card .name{
+    font-size: 25px;
+}

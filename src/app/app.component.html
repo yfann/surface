@@ -5,6 +5,6 @@
 
 <div class="items">
     <div *ngFor="let item of items">
-        <item-card [item]='item'></item-card>
+        <item-card [item]='item' (rate)="rating($event)"></item-card>
     </div>
 </div>

@@ -5,10 +5,8 @@
 </ng-template>
 
 <div class="item-card">
-    <a href="{{item.url}}">{{item.name}}</a>
-    <button type="button" class="btn btn-outline-secondary mr-2" placement="right"
-        [ngbPopover]="images" popoverTitle="image">
-    Popover on top
-    </button>
-    <div>{{item.desc}}</div>
+    <a class="name" href="{{item.url}}">{{item.name}}</a>
+    <span class="img-info" lacement="right" [ngbPopover]="images" popoverTitle="image">{{item.imgs.length}}</span>
+    <ngb-rating #rateelement [(rate)]="item.rate" (hover)="hover()" (rateChange)="rating()"></ngb-rating>
+    <div class="desc">{{item.desc}}</div>
 </div>

@@ -19,4 +19,13 @@ export class AppComponent {
       }
     )
   }
+
+  rating(item:any):void{
+    let updateObj={
+      'url':item.url,
+      'rate':item.rate,
+      'modified_time':Date.now()
+    }
+    this.service.update(updateObj).subscribe();
+  }
 }

@@ -12,4 +12,8 @@ export class DataServiceProvider {
    getAll(){
     return this.http.get('http://127.0.0.1:5000/jiaoyou/all');
   }
+
+  update(item){
+    return this.http.post('http://localhost:5000/jiaoyou/up',item);
+  }
 }

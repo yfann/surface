@@ -2,6 +2,7 @@
     margin-bottom: 20px;
     padding: 5px;
     background-color: #cce5ff;
+    position: relative;
 }
 
 .item-card .desc{
@@ -21,4 +22,9 @@
 
 .item-card .name{
     font-size: 25px;
+}
+
+.item-card .close{
+    position: absolute;
+    right:10px;
 }

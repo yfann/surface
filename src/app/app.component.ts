@@ -23,8 +23,15 @@ export class AppComponent {
   rating(item:any):void{
     let updateObj={
       'url':item.url,
-      'rate':item.rate,
-      'modified_time':Date.now()
+      'rate':item.rate
+    }
+    this.service.update(updateObj).subscribe();
+  }
+
+  invisible(item:any):void{
+    let updateObj={
+      'url':item.url,
+      'invisible':true
     }
     this.service.update(updateObj).subscribe();
   }

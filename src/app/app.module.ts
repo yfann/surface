@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import {ItemCard} from './item-card/item-card';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     BrowserModule,
     CommonModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [HttpClientModule,JsonHttpProvider,DataServiceProvider],
   bootstrap: [AppComponent]

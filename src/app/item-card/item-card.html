@@ -4,10 +4,11 @@
     </div>
 </ng-template>
 
-<div class="item-card">
-    <a class="name" href="{{item.url}}">{{item.name}}</a>
+<div class="item-card" [ngClass]="{'hide': hide}">
+    <a class="name" href="{{item.url}}"  target="_blank">{{item.name}}</a>
     <span class="img-info" lacement="right" [ngbPopover]="images" popoverTitle="image">{{item.imgs.length}}</span>
     <ngb-rating #rateelement [(rate)]="item.rate" (hover)="hover()" (rateChange)="rating()"></ngb-rating>
-    <span class="close">X</span>
+    <span class="close" (click)="close()">X</span>
+    <span class="create-time">{{item.create_time}}</span>
     <div class="desc">{{item.desc}}</div>
 </div>

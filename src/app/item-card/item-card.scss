@@ -18,6 +18,7 @@
     margin: 0 10px;
     border-radius: 11px;
     color: #312b65;
+    cursor: pointer;
 }
 
 .item-card .name{
@@ -27,4 +28,13 @@
 .item-card .close{
     position: absolute;
     right:10px;
+    cursor: pointer;
+}
+
+.hide{
+    display: none;
+}
+
+.item-card .create-time{
+    display: block;
 }

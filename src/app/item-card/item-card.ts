@@ -10,9 +10,11 @@ import { elementEventFullName } from '@angular/compiler/src/view_compiler/view_c
 export class ItemCard {
     @Input() item;
     @Output() rate = new EventEmitter<string>();
+    @Output() invisible = new EventEmitter<string>();
     @ViewChild('rateelement',{static: false})
     ratele;
     hoved=false;
+    hide=false;
 
     constructor(private service: DataServiceProvider) {
     }
@@ -30,5 +32,10 @@ export class ItemCard {
             this.rate.emit(this.item);
             this.hoved=false;
         }
+    }
+
+    close():void{
+        this.hide=true;
+        this.invisible.emit(this.item);
     }
 }

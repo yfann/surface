@@ -1,10 +1,10 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="search">
-    <input type="text" name="search" #searchbar (keyup.enter)="search(searchbar.value)">
+    <input type="text" [(ngModel)]="searchValue" #searchbar (keyup.enter)="search(searchbar.value)">
 </div>
 
 <div class="items">
     <div *ngFor="let item of items">
-        <item-card [item]='item' (rate)="rating($event)"></item-card>
+        <item-card [item]='item' (rate)="rating($event)" (invisible)="invisible($event)"></item-card>
     </div>
 </div>

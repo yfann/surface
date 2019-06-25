@@ -9,11 +9,12 @@ import {DataServiceProvider}from './services/data-service'
 export class AppComponent {
   title = 'surface';
   items;
+  searchValue='';
   constructor(private service: DataServiceProvider) {
   }
 
   search(newText: string): void {
-    this.service.getAll().subscribe(
+    this.service.search(this.searchValue).subscribe(
       res=>{
         this.items=res;
       }

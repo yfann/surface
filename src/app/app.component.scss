@@ -1,14 +1,35 @@
+
+
 .search{
     margin-top: 30px;
 }
 
+.search .options{
+    display: block;
+    margin: 0 auto;
+    width: 500px;
+    position: relative;
+}
+
+.search .options .sfcheck{
+    margin-right: 10px;
+}
+.search .search-btn{
+    position: absolute;
+    right: 1px;
+}
 .search input{
     display: block;
     margin: 0 auto;
     width: 500px;
 }
 
+.info{
+    position: absolute;
+    top: 31px;
+    left: 303px;
+}
+
 .items{
-    margin-top: 20px;
     padding: 0 300px;
 }

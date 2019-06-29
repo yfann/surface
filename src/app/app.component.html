@@ -1,6 +1,14 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="search">
     <input type="text" [(ngModel)]="searchValue" #searchbar (keyup.enter)="search(searchbar.value)">
+    <div class="options">
+            <mat-checkbox [(ngModel)]="checkShanHai" class="sfcheck">上海/魔都</mat-checkbox>
+            <mat-checkbox [(ngModel)]="checkPhoto" class="sfcheck">照片</mat-checkbox>
+            <button class="search-btn" (click)="searchClick()" mat-button>Search!</button>
+    </div>
+</div>
+<div class="info">
+    total:{{items.length}}
 </div>
 
 <div class="items">

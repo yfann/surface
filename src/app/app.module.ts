@@ -11,6 +11,8 @@ import { CommonModule } from '@angular/common';
 import {ItemCard} from './item-card/item-card';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,10 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule, 
+    MatCheckboxModule
   ],
   providers: [HttpClientModule,JsonHttpProvider,DataServiceProvider],
   bootstrap: [AppComponent]

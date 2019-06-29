@@ -10,15 +10,25 @@ export class AppComponent {
   title = 'surface';
   items;
   searchValue='';
+  checkShanHai=true;
+  checkPhoto=true;
   constructor(private service: DataServiceProvider) {
   }
 
   search(newText: string): void {
-    this.service.search(this.searchValue).subscribe(
+    let val=this.searchValue;
+    if(this.checkShanHai){
+      val+=' 上海 魔都';
+    }
+    this.service.search(val,this.checkPhoto).subscribe(
       res=>{
         this.items=res;
       }
     )
+  }
+
+  searchClick():void{
+    this.search('');
   }
 
   rating(item:any):void{

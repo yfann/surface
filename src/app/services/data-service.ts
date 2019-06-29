@@ -5,8 +5,8 @@ export class DataServiceProvider {
     constructor(public http: JsonHttpProvider) {
     }
 
-   search(desc:string){
-     return this.http.get('http://localhost:5000/jiaoyou?s='+desc);
+   search(desc:string,hasPhoto:boolean){
+     return this.http.get('http://localhost:5000/jiaoyou?s='+desc+'&p='+hasPhoto);
    }
 
    getAll(){
